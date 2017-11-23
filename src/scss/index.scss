@@ -1,0 +1,42 @@
+@import "./helpers/_mixin.scss";
+@import "./helpers/_function.scss";
+@import "./helpers/_sprite.scss";
+@import "./helpers/_common.scss";
+
+.autoprefixer-test{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+	box-sizing: border-box;
+	border: 1px solid red;
+	div{
+		flex-grow: 1;
+		text-align: center;
+		border: 1px solid red;
+	}
+}
+
+.icon1{
+	@include sprite($icon-a-2x);
+}
+.icon2{
+	@include sprite($icon-b-2x);
+}
+.icon3{
+	@include sprite2x($icon-c-2x);
+}
+.icon4{
+	@include sprite2x($icon-d-2x);
+}
+
+.float-test{
+	@include clearfix();
+	.l{
+		float: left;
+		width: 50%;
+		border: 1px solid red;
+		box-sizing: border-box;
+	}
+}
